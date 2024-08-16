@@ -1,0 +1,75 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "sku": "item1",
+      "title": "Groovy off white",
+      "availableSizes": ["S", "M", "XL", "XXL"],
+      "price": 11.2,
+      "installments": 9,
+      "isFreeShipping": true,
+      "imgURL": "/imgs/10686354557628304-1-product.webp"
+    },
+    {
+      "id": 2,
+      "sku": "item2",
+      "title": "T-shirt",
+      "availableSizes": ["S", "XL", "XS"],
+      "price": 10.5,
+      "installments": 9,
+      "isFreeShipping": false,
+      "imgURL": "/imgs/10547961582846888-1-product.webp"
+    },
+
+    {
+      "id": 3,
+      "sku": "item3",
+      "title": "Skater Black Sweatshirt",
+      "availableSizes": ["S", "M", "L", "XL"],
+      "price": 12.8,
+      "installments": 9,
+      "isFreeShipping": true,
+      "imgURL": "/imgs/11600983276356164-1-product.webp"
+    },
+    {
+      "id": 4,
+      "sku": "item4",
+      "title": "Black Tule Oversized",
+      "availableSizes": ["S", "L", "XL"],
+      "price": 9.6,
+      "installments": 9,
+      "isFreeShipping": true,
+      "imgURL": "/imgs/10686354557628304-1-product.webp"
+    },
+    {
+      "id": 5,
+      "sku": "item5",
+      "title": "Loose Black T-shirt",
+      "availableSizes": ["S", "M", "ML"],
+      "price": 13.7,
+      "installments": 9,
+      "isFreeShipping": true,
+      "imgURL": "/imgs/9197907543445676-1-product.webp"
+    },
+    {
+      "id": 6,
+      "sku": "item6",
+      "title": "Ringer Hall Pass",
+      "availableSizes": ["S", "M", "ML"],
+      "price": 13.2,
+      "installments": 9,
+      "isFreeShipping": true,
+      "imgURL": "/imgs/18532669286405344-1-product.webp"
+    },
+    {
+      "id": 7,
+      "sku": "item7",
+      "title": "Black T-shirt with white stripes",
+      "availableSizes": ["S", "M", "ML"],
+      "price": 13.8,
+      "installments": 9,
+      "isFreeShipping": true,
+      "imgURL": "/imgs/876661122392077-1-product.webp"
+    }
+  ]
+}

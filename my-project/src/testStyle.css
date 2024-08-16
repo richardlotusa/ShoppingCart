@@ -1,0 +1,16 @@
+.test {
+  background: transparent;
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+  font-size: x-small;
+  font-weight: 600;
+  overflow-y: scroll;
+  height: 100%;
+  transition: transform 0.3 ease-in-out;
+  justify-content: space-between;
+}
