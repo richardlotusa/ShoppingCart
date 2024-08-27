@@ -1,5 +1,5 @@
 import styled from "styled-components";
 
-export const HeaderStyle = styled.header`
+export const HeaderContainer = styled.header`
   height: 80px;
 `;

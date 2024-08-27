@@ -3,9 +3,9 @@ import * as S from "./style";
 
 const Header = () => {
   return (
-    <S.HeaderStyle>
+    <S.HeaderContainer>
       <Cart />
-    </S.HeaderStyle>
+    </S.HeaderContainer>
   );
 };
 

@@ -6,17 +6,10 @@ export const Container = styled.div`
   height: 100%;
 `;
 
-export const ContainerStyle = styled.div`
+export const SizesContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
   font-size: x-small;
-`;
-
-export const BlockTitle = styled.div`
-  display: block;
-  font-weight: 700;
-  font-size: medium;
-  margin: 2px 0 20px 0;
 `;
 
 export const Title = styled.h4`
@@ -48,10 +41,6 @@ export const CheckboxLabel = styled.label`
     color: #ececec;
   }
 
-  input:checked ~ .checkmark:after {
-    display: block;
-  }
-
   input {
     position: absolute;
     opacity: 0;
@@ -73,3 +62,5 @@ export const CheckboxLabel = styled.label`
     border: 1px solid transparent;
   }
 `;
+
+//

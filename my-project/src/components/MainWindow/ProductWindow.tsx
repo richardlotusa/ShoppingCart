@@ -1,17 +1,17 @@
 import * as S from "./style";
 import { useProductContext } from "../../contexts/ProductContextProvider";
-import HeadMain from "./HeadMain";
+import BlockHeaderProduct from "./BlockHeaderProduct";
 
-const ClothesWindow = () => {
+const ProductWindow = () => {
   const { filteredProducts, addProductToCart, setCartOpen } =
     useProductContext();
 
   return (
     <S.Container>
-      <S.HeadMain>
-        <HeadMain />
-      </S.HeadMain>
-      <S.ClothesWindow>
+      <S.Header>
+        <BlockHeaderProduct />
+      </S.Header>
+      <S.ProductsContainer>
         {filteredProducts.map((product) => (
           <S.ProductItem key={product.sku}>
             <S.Image src={product.imgURL} alt={product.title} />
@@ -31,9 +31,9 @@ const ClothesWindow = () => {
             </S.BuyButton>
           </S.ProductItem>
         ))}
-      </S.ClothesWindow>
+      </S.ProductsContainer>
     </S.Container>
   );
 };
 
-export default ClothesWindow;
+export default ProductWindow;

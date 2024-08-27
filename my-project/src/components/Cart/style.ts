@@ -109,13 +109,13 @@ export const ItemCartContainer = styled.div`
   padding-bottom: 200px;
 `;
 
-export const ItemCartContainerSectionIsEmpty = styled.p`
+export const ItemCartEmpty = styled.p`
   color: #ececec;
   text-align: center;
   line-height: 40px;
 `;
 
-export const ItemCartContainerSectionNotEmptry = styled.div`
+export const ItemsCart = styled.div`
   position: relative;
   box-sizing: border-box;
   padding: 5%;
@@ -171,7 +171,7 @@ export const Quantity = styled.div`
   color: #5b5a5e;
 `;
 
-export const OtherInfoAndButtons = styled.div`
+export const ControlButtons = styled.div`
   position: relative;
   width: 40%;
   display: inline-block;
@@ -206,7 +206,7 @@ export const ChangeQuantity = styled.button`
   }
 `;
 
-export const CartFooter = styled.div`
+export const CartSummary = styled.div`
   box-sizing: border-box;
   padding: 5%;
   position: absolute;

@@ -15,6 +15,7 @@ export type ProductTypeContext = {
   setCartOpen: (isOpen: boolean) => void;
   filterProducts: (sizes: string[]) => void;
   filteredProducts: IProductType[];
+  availableSizes: string[];
 };
 
 const ProductContext = createContext<ProductTypeContext | undefined>(undefined);
@@ -32,20 +33,34 @@ type ProductProviderType = { children: ReactNode };
 const ProductProvider = ({ children }: ProductProviderType) => {
   const [products, setProducts] = useState<IProductType[]>([]);
   const [selectedSizes, setSelectedSizes] = useState<string[]>([]);
+
+  const [availableSizes, setAvailableSizes] = useState<string[]>([]);
   const { addProduct, isOpen, setCartOpen } = useCart();
 
-  useEffect(() => {
-    const fetchProducts = async () => {
-      try {
-        const response = await fetch("http://localhost:3500/products");
-        const data = await response.json();
-        console.log("Fetched products:", data);
-        setProducts(data);
-      } catch (err) {
-        if (err instanceof Error) console.log(err.message);
-      }
-    };
+  const fetchProducts = async () => {
+    try {
+      const response = await fetch("http://localhost:3500/products");
+      const data = await response.json();
+      console.log("Fetched products:", data);
 
+      const productSizes: string[] = data.reduce(
+        (acc: string[], item: IProductType) => {
+          return [...acc, ...item.availableSizes];
+        },
+        []
+      );
+
+      setAvailableSizes([...new Set(productSizes)]);
+
+      // console.log("productSizes", mergeArr);
+
+      setProducts(data);
+    } catch (err) {
+      if (err instanceof Error) console.log(err.message);
+    }
+  };
+
+  useEffect(() => {
     fetchProducts();
   }, []);
 
@@ -67,6 +82,7 @@ const ProductProvider = ({ children }: ProductProviderType) => {
     <ProductContext.Provider
       value={{
         products,
+        availableSizes,
         addProductToCart,
         isOpen,
         setCartOpen,

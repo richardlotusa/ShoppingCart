@@ -1,7 +1,6 @@
-import GlobalStyle from "./App";
 import Header from "./components/Header/Header";
-import ClothesWindow from "./components/MainWindow/ClothesWindow";
-import ClothesSizeBlock from "./components/ClothesSizeBlock/ClothesSizeBlock";
+import ClothesWindow from "./components/MainWindow/ProductWindow";
+import ProductSizesBlock from "./components/ProductSizesBlock/ProductSizesBlock";
 import { ProductProvider } from "./contexts/ProductContextProvider";
 
 import * as S from "./style";
@@ -9,20 +8,18 @@ import * as S from "./style";
 function App() {
   return (
     <>
-      <GlobalStyle />
-      <S.AppContainer>
-        <Header />
-        <S.WrapperMainAndSizes>
-          <ProductProvider>
-            <S.LeftDiv>
-              <ClothesSizeBlock />
-            </S.LeftDiv>
-            <S.RightDiv>
-              <ClothesWindow />
-            </S.RightDiv>
-          </ProductProvider>
-        </S.WrapperMainAndSizes>
-      </S.AppContainer>
+      <S.GlobalStyle />
+      <Header />
+      <S.WrapperContainers>
+        <ProductProvider>
+          <S.LeftContainer>
+            <ProductSizesBlock />
+          </S.LeftContainer>
+          <S.RightContainer>
+            <ClothesWindow />
+          </S.RightContainer>
+        </ProductProvider>
+      </S.WrapperContainers>
     </>
   );
 }

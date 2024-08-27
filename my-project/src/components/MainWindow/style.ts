@@ -2,17 +2,15 @@ import styled from "styled-components";
 
 export const Container = styled.div``;
 
-export const HeadMain = styled.div`
+export const Header = styled.div`
   height: 50px;
 `;
 
-export const ClothesWindow = styled.div`
+export const ProductsContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
-`;
-
-export const ItemContainer = styled.div`
-  position: relative;
+  max-height: 100%;
+  overflow: auto;
 `;
 
 export const BuyButton = styled.button`

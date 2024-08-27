@@ -43,16 +43,13 @@ const Cart = () => {
 
           <S.ItemCartContainer>
             {products.length === 0 ? (
-              <S.ItemCartContainerSectionIsEmpty>
+              <S.ItemCartEmpty>
                 Add some products in the cart <br />
                 :)
-              </S.ItemCartContainerSectionIsEmpty>
+              </S.ItemCartEmpty>
             ) : (
               products.map((product) => (
-                <S.ItemCartContainerSectionNotEmptry
-                  key={product.id}
-                  style={{ display: "flex" }}
-                >
+                <S.ItemsCart key={product.id} style={{ display: "flex" }}>
                   <S.Img src={product.imgURL} alt={product.title}></S.Img>
                   <S.Details>
                     <S.Title>{product.title}</S.Title>
@@ -60,7 +57,7 @@ const Cart = () => {
                     <S.Quantity>Quantity: {product.quantity}</S.Quantity>
                   </S.Details>
 
-                  <S.OtherInfoAndButtons>
+                  <S.ControlButtons>
                     <S.DeleteButton
                       onClick={() => removeProduct(product.id)}
                     ></S.DeleteButton>
@@ -81,18 +78,18 @@ const Cart = () => {
                         +
                       </S.ChangeQuantity>
                     </div>
-                  </S.OtherInfoAndButtons>
-                </S.ItemCartContainerSectionNotEmptry>
+                  </S.ControlButtons>
+                </S.ItemsCart>
               ))
             )}
           </S.ItemCartContainer>
-          <S.CartFooter>
+          <S.CartSummary>
             <S.Sub>SUBTOTAL</S.Sub>
             <S.SubPrice>
               <S.SubPriceValue>$ {totalPrice.toFixed(2)}</S.SubPriceValue>
             </S.SubPrice>
             <S.CheckoutButton>CHECKOUT</S.CheckoutButton>
-          </S.CartFooter>
+          </S.CartSummary>
         </S.CartContainer>
       </S.BlockCartContainer>
     </>
